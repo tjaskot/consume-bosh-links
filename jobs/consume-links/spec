@@ -1,0 +1,8 @@
+---
+name: consume-links
+
+templates:
+  client_ctl: bin/client_ctl
+consumes:
+  - name: http-server
+    type: http-router
