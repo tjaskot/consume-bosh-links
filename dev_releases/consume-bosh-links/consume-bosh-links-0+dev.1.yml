@@ -1,0 +1,10 @@
+name: consume-bosh-links
+version: 0+dev.1
+commit_hash: d8a3488
+uncommitted_changes: false
+jobs:
+- name: consume-links
+  version: d88de429bdf8e3b676a9e1568816377193e03c699ff2b740c5a290b81a5e0370
+  fingerprint: d88de429bdf8e3b676a9e1568816377193e03c699ff2b740c5a290b81a5e0370
+  sha1: sha256:ba6e1402ac4df97f2890b8d561cb74be93fdde3b74da85accf561ab51077dcff
+  packages: []

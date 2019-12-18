@@ -1,0 +1,4 @@
+az_name: us-central1-f
+disk_type: 1024
+network_name: canyonlake-services-subnet
+vm_type: small

@@ -1,3 +1,6 @@
+<%= link('http-server').instances[0].address %>
+<%= link('http-server').instances[1].address %>
+<%= link('http-server').instances[2].address %>
 <%link('http-server').instances.map do |instance|%>
     echo "<%= instance.address %>"
     #curl <%= instance.address %>:8088/updateClusters

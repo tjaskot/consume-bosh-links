@@ -1,0 +1,29 @@
+---
+name: consume-links-deployment
+releases:
+- name: "consume-bosh-links"
+  version: "0+dev.1"
+stemcells:
+  - alias: ubuntu-xenial
+    os: ubuntu-xenial
+    version: latest
+update:
+  canaries: 1
+  max_in_flight: 2
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
+instance_groups:
+- name: consume-links
+  azs:
+  - ((az_name))
+  instances: 1
+  jobs:
+  - name: consume-links
+    consumes:
+            http-server: {as: http-server, deployment: nginx-trevor}
+    release: consume-bosh-links
+  networks:
+  - name: ((network_name))
+  persistent_disk_type: ((disk_type))
+  stemcell: ubuntu-xenial
+  vm_type: ((vm_type))
